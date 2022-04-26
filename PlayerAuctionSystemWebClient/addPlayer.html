@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Player</title>
+</head>
+<body>
+	<H3>Add Player</H3>
+	<div align=left>
+		<!-- 
+		Tomcat server looks for the text written in action property of HTML's form element, inside web.xml
+	 -->
+		<!-- 
+	 	  Inside  web.xml, that text is searched inside the elements url-pattern present in the element <servlet-mapping>
+	  -->
+		<!-- 	  
+	 		 If the text is found in web.xml file, <servlet-name> element is looked for to find the corresponding servlet name
+	  	   -->
+		<!-- 
+	  	   The text present in <servlet-name> is found inside <servlet-name> element prsent in <servlet> element.
+	  	   <servlet-class> element of that <servlet> element is used to find the full path 
+	  	   (or say package name + class name) of the controller 
+	  	    -->
+		<!-- 
+	  	    Inside a controller, control first reaches inside service() method. If HTTP method is POST, request 
+	  	    will go to doPost() method; or doGet() in case of GET and so on 
+	  	     -->
+		<!-- 
+	  	     Inside service() method or any method from among doGet(), doPost(); we can write conditional statements 
+	  	     to look for some data in the incoming request and apply our code logic accordingly
+	  	      -->
+
+		<!--
+	  	      Use the instance of javax.servlet.http.HttpServletRequest interface to access the contents coming as 
+	  	      part of the request.
+	  	      On processing the request based on your business logic, use the instance of 
+			 javax.servlet.http.HttpServletResponse interface to send a response back to client (browser).
+	  	        -->
+		<form action="addPlayer" method="post">
+			Name: <input type="text" name="name"> <br> <br>
+			Category: <input type="text" name="category"> <br> <br>
+			Highest Score: <input type="text" name="highestScore"> <br>
+			<br> Best figure: <input type="text" name="bestFigure">
+			<br> <br> Team Name: <input type="text" name="teamName">
+			<br> <br> <br> <input type="submit" value="Submit">
+		</form>
+
+		<!-- 		<form action="addPlayer" method="post"> -->
+		<!-- 			Name: <input id="PlayerName" placeholder="PlayerName" type="text" -->
+		<!-- 				name="PlayerName"> <br> <br> <br> -->
+		<!-- 			<label id="lblPlayerName" style="color: red; visibility: hidden">Invalid -->
+		<!-- 				Player Name</label><br> <br> -->
+		<!-- 			<button onclick="ValidatePlayerName()" type="button">validate</button> -->
+		<!-- 			Category: <input id="category" placeholder="category" type="text" -->
+		<!-- 				name="category"> <br> <br> <br> -->
+		<!-- 			<label id="lblcategory" style="color: red; visibility: hidden">Invalid -->
+		<!-- 				Category</label><br> <br> -->
+		<!-- 			<button onclick="ValidateCategory()" type="button">validate</button> -->
+		<!-- 			Highest Score: <input type="text" name="highestScore"> <br> -->
+		<!-- 			<br> Best figure: <input type="text" name="bestFigure"> -->
+		<!-- 			<br> <br> Team Name: <input id="teamName" -->
+		<!-- 				placeholder="teamName" type="text" name="teamName"><br> -->
+		<!-- 			<br> -->
+		<!-- 			<label id="lbluser" style="color: red; visibility: hidden">Invalid -->
+		<!-- 				Team Name</label><br> <br> -->
+		<!-- 			<button onclick="ValidateTeamName()" type="button">Submit</button> -->
+		<!-- 			<br> <br> <br> <input type="submit" value="Submit"> -->
+		<!-- 		</form> -->
+	</div>
+
+</body>
+
+</html>
