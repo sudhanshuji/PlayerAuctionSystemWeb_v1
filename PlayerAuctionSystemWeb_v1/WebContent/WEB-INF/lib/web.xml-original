@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>PlayerAuctionSystemWeb</display-name>
+	<welcome-file-list>
+		<!-- Used to define default home page for theapplication -->
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- servlet element is used to declare the controller used in application -->
+	<servlet>
+		<servlet-name>PlayerController</servlet-name>
+		<servlet-class>pas.controller.PlayerController</servlet-class>
+	</servlet>
+	<!-- servlet-mapping element is used to define web path to a resource inside 
+		the contoller -->
+	<servlet-mapping>
+		<servlet-name>PlayerController</servlet-name>
+		<url-pattern>/addPlayer</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PlayerController</servlet-name>
+		<url-pattern>/displayPlayers</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PlayerController</servlet-name>
+		<url-pattern>/getCategories</url-pattern>
+	</servlet-mapping>
+
+<servlet-mapping>
+		<servlet-name>PlayerController</servlet-name>
+		<url-pattern>/getTeamName</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

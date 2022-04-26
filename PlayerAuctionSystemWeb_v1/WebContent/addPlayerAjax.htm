@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="loadData()">
+	<h1>Add Player AJAX</h1>
+
+	<!--  <form action="addPlayer" method="post">
+		Name: <input id="PlayerName" placeholder="PlayerName" type="text"
+			name="PlayerName"> <br> <br> <br> <label
+			id="lblPlayerName" style="color: red; visibility: hidden">Invalid
+			Player Name</label><br> <br>
+		<button onclick="ValidatePlayerName()" type="button">validate</button>
+		Category: <input id="category" placeholder="category" type="text"
+			name="category"> <br> <br> <br> <label
+			id="lblcategory" style="color: red; visibility: hidden">Invalid
+			Category</label><br> <br>
+		<button onclick="ValidateCategory()" type="button">validate</button>
+		Highest Score: <input type="text" name="highestScore"> <br>
+		<br> Best figure: <input type="text" name="bestFigure"> <br>
+		<br> Team Name: <input id="teamName" placeholder="teamName"
+			type="text" name="teamName"><br> <br> <label
+			id="lbluser" style="color: red; visibility: hidden">Invalid
+			Team Name</label><br> <br>
+		<button onclick="ValidateTeamName()" type="button">Submit</button>
+		<br> <br> <br> <input type="submit" value="Submit">
+	</form>-->
+
+	<!-- <form action="">
+		<table>
+			<tr>
+				<td><label>Name</label></td>
+				<td>:</td>
+				<td><input id="playerName" placeholder="Player Name" type="text"
+					name="playerName" onfocusout="validatePlayerName()"></td>
+				<td><span id="errorPlayerName"></span></td>
+			</tr>
+			<tr>
+				<td><label>Category</label></td>
+				<td>:</td>
+				<td>
+					<input id="category" placeholder="category" type="text"
+					name="category" onfocusout="validateCategory()"> 
+					<select id="category" placeholder="category" type="text"
+					name="category" onfocusout="validateCategory()">
+						<option value="select">Select</option>
+						<option value="batsman">BATSMAN</option>
+						<option value="bowler">BOWLER</option>
+						<option value="allrounder">ALLROUNDER</option>
+
+				</select>
+				</td>
+				<td><span id="errorCategory"></span></td>
+			</tr>
+			<tr>
+				<td><label>Highest score</label></td>
+				<td>:</td>
+				<td><input id="highestScore" placeholder="HighestScore"
+					type="text" name="HighestScore" onfocusout="validateHighestScore()"></td>
+				<td><span id="errorHighestScore"></span></td>
+			</tr>
+
+			<tr>
+				<td><label>Best Figure</label></td>
+				<td>:</td>
+				<td><input id="bestFigure" placeholder="bestFigure" type="text"
+					name="bestFigure" onfocusout="validateBestFigure()"></td>
+				<td><span id="errorBestFigure"></span></td>
+			</tr>
+
+			<tr>
+				<td><label>Team Name</label></td>
+				<td>:</td>
+				<td><input id="teamName" placeholder="teamName" type="text"
+					name="teamName" onfocusout="validateTeamName()"></td>
+				<td><span id="errorTeamName"></span></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Submit"></td>
+				<td></td>
+				<td><input type="reset" value="Reset"></td>
+			</tr>
+		</table>
+	</form> -->
+
+	<form action="">
+		<table>
+			<tr>
+				<td><label>Name</label></td>
+				<td>:</td>
+				<td><input id="playerName" placeholder="Player Name"
+					type="text" name="playerName" onfocusout="validatePlayerName()"></td>
+				<td><span id="errorPlayerName"></span></td>
+			</tr>
+			<tr>
+				<td><label>Category</label></td>
+				<td>:</td>
+				<td>
+					<!-- <input id="category" placeholder="category" type="text"
+					name="category" onfocusout="validateCategory()">  --> <select
+					id="category" placeholder="category" type="text" name="category"
+					onfocusout="validateCategory()">
+
+				</select>
+				</td>
+				<td><span id="errorCategory"></span></td>
+			</tr>
+			<tr>
+				<td><label>Highest score</label></td>
+				<td>:</td>
+				<td><input id="highestScore" placeholder="HighestScore"
+					type="text" name="HighestScore" onfocusout="validateHighestScore()"></td>
+				<td><span id="errorHighestScore"></span></td>
+			</tr>
+
+			<tr>
+				<td><label>Best Figure</label></td>
+				<td>:</td>
+				<td><input id="bestFigure" placeholder="bestFigure" type="text"
+					name="bestFigure" onfocusout="validateBestFigure()"></td>
+				<td><span id="errorBestFigure"></span></td>
+			</tr>
+
+			<tr>
+				<td><label>Team Name</label></td>
+				<td>:</td>
+				<td><!--  <input id="teamName" placeholder="teamName" type="text"
+					name="teamName" onfocusout="validateTeamName()">-->
+					<select
+					id="teamName" placeholder="teamName" type="text" name="teamName"
+					onfocusout="validateTeamName()">
+
+				</select>
+					
+					</td>
+				<td><span id="errorTeamName"></span></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Submit"></td>
+				<td></td>
+				<td><input type="reset" value="Reset"></td>
+			</tr>
+		</table>
+	</form>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/addPlayerAjax.js"></script>
+
+</body>
+</html>
