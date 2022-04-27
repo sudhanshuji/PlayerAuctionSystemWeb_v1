@@ -89,8 +89,8 @@ function validateBestFigure() {
 
 function loadData() {
 
-	var url = "http://localhost:8080/PlayerAuctionSystemWeb/getCategories";
-	var url1 = "http://localhost:8080/PlayerAuctionSystemWeb/getTeamName";
+	var url = "http://localhost:8080/PlayerAuctionSystemWeb_v1/getCategories";
+	var url1 = "http://localhost:8080/PlayerAuctionSystemWeb_v1/getTeamName";
 	var method = "GET";
 	// practice $.ajax yourself
 	$.get(url, function(data) {
@@ -186,7 +186,7 @@ submitButton.addEventListener("click", () => {
 	//console.log(teamNameElement);
 	//console.log("teamNameElement value -"+teamNameElement);
 	var key = 'some dynamic data generated on server';
-	var player_url = "http://localhost:8080/PlayerAuctionSystemWeb/addPlayerAjax";
+	var player_url = "http://localhost:8080/PlayerAuctionSystemWeb_v1/addPlayerAjax";
 	var data = { playerName: $("input#playerName").val(), category : categoryOptionSelected.val(), highestScore : $("input.highestScore").val(), bestFigure : $("input#bestFigure").val(), teamName : teamName.val()}
 	if(flag){
 		console.log(data);	

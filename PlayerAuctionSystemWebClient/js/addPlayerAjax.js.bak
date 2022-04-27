@@ -186,7 +186,7 @@ submitButton.addEventListener("click", () => {
 	//console.log(teamNameElement);
 	//console.log("teamNameElement value -"+teamNameElement);
 	var key = 'some dynamic data generated on server';
-	var player_url = "http://localhost:8080/PlayerAuctionSystemWeb/addPlayerAjax";
+	var player_url = "http://localhost:8080/PlayerAuctionSystemWeb_v1/addPlayerAjax";
 	var data = { playerName: $("input#playerName").val(), category : categoryOptionSelected.val(), highestScore : $("input.highestScore").val(), bestFigure : $("input#bestFigure").val(), teamName : teamName.val()}
 	if(flag){
 		console.log(data);	
@@ -208,7 +208,7 @@ submitButton.addEventListener("click", () => {
 				error: function( jqXhr, textStatus, errorThrown ){
 					console.log( errorThrown );
 					console.log( jqXhr.responseJSON.error[0] );
-					var text = '<font color=green>'+ jqXhr.responseJSON.error[0] + '</font>';
+					var text = '<font color=red>'+ jqXhr.responseJSON.error[0] + '</font>';
 					$("span[id='message']").html(text);
 					}
 			});
